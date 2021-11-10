@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "312246767798",
+    "firebase_url": "https://daily-astronomy.firebaseio.com",
+    "project_id": "daily-astronomy",
+    "storage_bucket": "daily-astronomy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312246767798:android:c45ef3b2903bd6f21a5617",
+        "android_client_info": {
+          "package_name": "hu.daniel.dailyastronomy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312246767798-eajtlliip9bs07o0n58sas1q03v6mm81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYsJTTg5YhooctH1m4FpsHTFggxoBVFi0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "312246767798-eajtlliip9bs07o0n58sas1q03v6mm81.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "312246767798-lott62mg7b9l7qoskc5r2unse6s753d5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "epam.SpaceR"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

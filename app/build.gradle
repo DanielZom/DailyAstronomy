@@ -1,0 +1,138 @@
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+apply plugin: "kotlin-kapt"
+apply plugin: "com.google.gms.google-services"
+apply plugin: "com.google.firebase.crashlytics"
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        applicationId "hu.daniel.dailyastronomy"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    def newsApiKey = "69da1ceee6e445e7a5378c0ed9c991ff"
+    def newsApiURL = "https://newsapi.org/v2/"
+    def newsApiQuery = "astronomy OR cosmology OR nasa OR spacex"
+
+    def galleryApiKey = "hAzmhUw7YvW7pvtsboXXkV7SMd8dWadG6cm6FO3y"
+    def galleryApiURL = "https://api.nasa.gov/planetary/"
+
+    def liveUrl = "https://www.youtube.com/watch?v=DDU-rZs-Ic4"
+
+    def appCenterKey = "9dfb5756-42fb-4955-9565-71b48d5a0a06"
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "NEWS_API_KEY", "\"$newsApiKey\"")
+            buildConfigField("String", "NEWS_API_BASE_URL", "\"$newsApiURL\"")
+            buildConfigField("String", "NEWS_API_QUERY", "\"$newsApiQuery\"")
+            buildConfigField("String", "GALLERY_API_KEY", "\"$galleryApiKey\"")
+            buildConfigField("String", "GALLERY_API_BASE_URL", "\"$galleryApiURL\"")
+            buildConfigField("String", "LIVE_URL", "\"$liveUrl\"")
+            buildConfigField("String", "APPCENTER_KEY", "\"$appCenterKey\"")
+        }
+        debug {
+            buildConfigField("String", "NEWS_API_KEY", "\"$newsApiKey\"")
+            buildConfigField("String", "NEWS_API_BASE_URL", "\"$newsApiURL\"")
+            buildConfigField("String", "NEWS_API_QUERY", "\"$newsApiQuery\"")
+            buildConfigField("String", "GALLERY_API_KEY", "\"$galleryApiKey\"")
+            buildConfigField("String", "GALLERY_API_BASE_URL", "\"$galleryApiURL\"")
+            buildConfigField("String", "LIVE_URL", "\"$liveUrl\"")
+            buildConfigField("String", "APPCENTER_KEY", "\"$appCenterKey\"")
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$kotlinCoreVersion"
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+    implementation "androidx.viewpager2:viewpager2:$viewPager2Version"
+    implementation "com.google.android.material:material:$googleMaterialVersion"
+    implementation "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefreshVersion"
+
+    //Test
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+
+    //Koin
+    implementation "org.koin:koin-android:$koinVersion"
+    implementation "org.koin:koin-androidx-viewmodel:$koinVersion"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$retrofitVersion"
+
+    //Okhttp
+    //noinspection GradleDependency
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:$okhttpVersion"
+
+    //RxJava
+    implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
+    implementation "io.reactivex.rxjava3:rxjava:$rxJavaVersion"
+
+    //Coil
+    implementation "io.coil-kt:coil:$coilVersion"
+    implementation "io.coil-kt:coil-base:$coilVersion"
+
+    //Stetho
+    implementation "com.facebook.stetho:stetho:$stethoVersion"
+    implementation "com.facebook.stetho:stetho-okhttp3:$stethoNetworkVersion"
+
+    //Timber
+    implementation "com.jakewharton.timber:timber:$timberVersion"
+
+    //Flexbox layout
+    implementation "com.google.android:flexbox:$flexboxLayoutVersion"
+
+    //Crashlytics
+    implementation platform("com.google.firebase:firebase-bom:$firebaseVersion")
+    implementation "com.google.firebase:firebase-analytics-ktx"
+    implementation "com.google.firebase:firebase-crashlytics"
+    implementation "com.google.firebase:firebase-analytics"
+
+    //LeakCanary
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
+
+    //AppCenter
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/news"
+        android:enabled="true"
+        android:icon="@drawable/news"
+        android:title="@string/news" />
+
+    <item
+        android:id="@+id/solarSystem"
+        android:enabled="true"
+        android:icon="@drawable/solar_system"
+        android:title="@string/solar_system" />
+
+    <item
+        android:id="@+id/live"
+        android:enabled="true"
+        android:icon="@drawable/live"
+        android:title="@string/live" />
+
+    <item
+        android:id="@+id/gallery"
+        android:enabled="true"
+        android:icon="@drawable/gallery"
+        android:title="@string/gallery" />
+
+    <item
+        android:id="@+id/settings"
+        android:enabled="true"
+        android:icon="@drawable/settings"
+        android:title="@string/settings" />
+</menu>

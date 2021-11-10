@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="news_user_message_width_percent" format="float" type="integer">0.2</item>
+    <item name="splash_icon_width" format="float" type="integer">0.2</item>
+    <item name="news_detail_back_button_width" format="float" type="integer">0.09</item>
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="hu.daniel.dailyastronomy.presentation.main.settings.ThemeState" />
+
+        <variable
+            name="viewModel"
+            type="hu.daniel.dailyastronomy.presentation.main.settings.SettingsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/settingsLayout"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:background="@drawable/background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/themeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent_black_background_with_stroke"
+            android:padding="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/themeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/theme_title"
+                android:textColor="@color/secondaryColor70"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lightThemeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:onClick="@{() -> viewModel.changeThemeTo(ThemeState.LIGHT)}"
+                android:shadowColor="@color/black"
+                android:shadowRadius="2.5"
+                android:text="@string/light"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/themeSwitch"
+                app:layout_constraintTop_toBottomOf="@id/themeTitle" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/themeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@{viewModel.themeState == ThemeState.DARK}"
+                android:thumb="@drawable/theme_switch_thumb_selector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/themeTitle"
+                app:trackTint="@color/grey" />
+
+            <TextView
+                android:id="@+id/darkThemeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:onClick="@{() -> viewModel.changeThemeTo(ThemeState.DARK)}"
+                android:text="@string/dark"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/themeSwitch"
+                app:layout_constraintTop_toBottomOf="@id/themeTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/space"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/versionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent_black_background_with_stroke"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_32"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_32">
+
+            <TextView
+                android:id="@+id/appVersion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{viewModel.formattedAppVersion}"
+                android:textColor="@color/secondaryColor70"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Version: v0.1 (123)" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

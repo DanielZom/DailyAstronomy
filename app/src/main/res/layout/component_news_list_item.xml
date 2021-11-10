@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="article"
+            type="hu.daniel.dailyastronomy.dto.Article" />
+
+        <variable
+            name="vm"
+            type="hu.daniel.dailyastronomy.presentation.main.news.NewsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="@drawable/black_background_with_stroke"
+        android:onClick="@{() -> vm.articleClicked(article)}">
+
+        <hu.daniel.dailyastronomy.presentation.views.RoundedImageView
+            android:id="@+id/articleImage"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginStart="@dimen/dp_2"
+            android:cropToPadding="true"
+            android:paddingTop="@dimen/dp_2"
+            android:paddingBottom="@dimen/dp_2"
+            android:scaleType="centerCrop"
+            app:bottomLeftRadius="@dimen/news_list_item_image_view_corner_radius"
+            app:imageUrl="@{article.urlToImage}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:topLeftRadius="@dimen/news_list_item_image_view_corner_radius"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/default_article_image" />
+
+        <TextView
+            android:id="@+id/articleTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{article.title}"
+            android:textColor="@color/secondaryColor70"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/articleImage"
+            app:layout_constraintTop_toTopOf="@id/articleImage"
+            tools:text="Title of item" />
+
+        <TextView
+            android:id="@+id/articleDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_8"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textColor="@color/secondaryColor70"
+            app:layout_constraintBottom_toBottomOf="@id/articleImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/articleImage"
+            app:layout_constraintTop_toBottomOf="@id/articleTitle"
+            app:textFromHtml="@{article.description}"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru..." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

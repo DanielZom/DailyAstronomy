@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8969C3</color>
+    <color name="colorPrimaryDark">#8969C3</color>
+    <color name="colorAccent">#8969C3</color>
+
+    <color name="mainColor">#000000</color>
+    <color name="mainColor50">#80000000</color>
+    <color name="mainColor70">#B3000000</color>
+
+    <color name="secondaryColor70">#B3FFFFFF</color>
+    <color name="secondaryColor">#FFFFFF</color>
+
+    <color name="grey">#C4C4C4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="purple">#8969C3</color>
+    <color name="purple_light">#C2A2FD</color>
+</resources>

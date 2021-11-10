@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="astronomical_symbol">Astronomical symbol:</string>
+    <string name="characteristics">Characteristics</string>
+
+    <string name="earth">Earth</string>
+    <string name="mercury">Mercury</string>
+    <string name="venus">Venus</string>
+    <string name="mars">Mars</string>
+    <string name="jupiter">Jupiter</string>
+    <string name="saturn">Saturn</string>
+    <string name="uranus">Uranus</string>
+    <string name="neptune">Neptune</string>
+    <string name="ceres">Ceres</string>
+    <string name="eris">Eris</string>
+    <string name="moon">Moon</string>
+    <string name="pluto">Pluto</string>
+    <string name="sun">Sun</string>
+
+    <string name="sun_fact_1_name">Absolute magnitude</string>
+    <string name="sun_fact_1_value">4.83</string>
+    <string name="sun_fact_2_name">Galactic period</string>
+    <string name="sun_fact_2_value">(2.25–2.50)×10⁸ yr</string>
+    <string name="sun_fact_3_name">Temperature</string>
+    <string name="sun_fact_3_value">1.57×10⁷ K</string>
+    <string name="sun_fact_4_name">Age</string>
+    <string name="sun_fact_4_value">≈ 4.6 billion years</string>
+    <string name="sun_fact_5_name">Mass</string>
+    <string name="sun_fact_5_value">1.9885×10³⁰ kg</string>
+
+    <string name="mercury_fact_1_name">Volume</string>
+    <string name="mercury_fact_1_value">6.083×10¹⁰ km</string>
+    <string name="mercury_fact_2_name">Flattening</string>
+    <string name="mercury_fact_2_value">0.0000</string>
+    <string name="mercury_fact_3_name">Semi-major axis</string>
+    <string name="mercury_fact_3_value">0.387098 AU</string>
+    <string name="mercury_fact_4_name">Average orbital speed</string>
+    <string name="mercury_fact_4_value">47.362 km/s</string>
+    <string name="mercury_fact_5_name">Eccentricity</string>
+    <string name="mercury_fact_5_value">0.205630</string>
+
+    <string name="venus_fact_1_name">Mean radius</string>
+    <string name="venus_fact_1_value">6,051.8±1.0 km</string>
+    <string name="venus_fact_2_name">Surface gravity</string>
+    <string name="venus_fact_2_value">8.87 m/s²</string>
+    <string name="venus_fact_3_name">North pole right ascension</string>
+    <string name="venus_fact_3_value">18h 11m 2s</string>
+    <string name="venus_fact_4_name">Albedo</string>
+    <string name="venus_fact_4_value">0.689 (geometric)</string>
+    <string name="venus_fact_5_name">Surface pressure</string>
+    <string name="venus_fact_5_value">91 atm</string>
+
+    <string name="earth_fact_1_name">Equatorial Diameter</string>
+    <string name="earth_fact_1_value">12,756 km</string>
+    <string name="earth_fact_2_name">Orbit Distance</string>
+    <string name="earth_fact_2_value">149,598,262 km (1 AU)</string>
+    <string name="earth_fact_3_name">Orbit Period</string>
+    <string name="earth_fact_3_value">365.24 days</string>
+    <string name="earth_fact_4_name">Mass</string>
+    <string name="earth_fact_4_value">5.97 × 10^24 kg</string>
+    <string name="earth_fact_5_name">Surface Temperature</string>
+    <string name="earth_fact_5_value">-88 to 58°C</string>
+
+    <string name="moon_fact_1_name">Mean density</string>
+    <string name="moon_fact_1_value">3.344 g/cm³</string>
+    <string name="moon_fact_2_name">Axial tilt</string>
+    <string name="moon_fact_2_value">1.5424° to ecliptic</string>
+    <string name="moon_fact_3_name">Equatorial rotation velocity</string>
+    <string name="moon_fact_3_value">4.627 m/s</string>
+    <string name="moon_fact_4_name">Surface pressure</string>
+    <string name="moon_fact_4_value">10−⁷ Pa(day) 10−¹⁰ Pa(night)</string>
+    <string name="moon_fact_5_name">Angular diameter</string>
+    <string name="moon_fact_5_value">29.3 to 34.1 arcminutes</string>
+
+    <string name="mars_fact_1_name">Synodic period</string>
+    <string name="mars_fact_1_value">779.96 d</string>
+    <string name="mars_fact_2_name">Satellites</string>
+    <string name="mars_fact_2_value">2</string>
+    <string name="mars_fact_3_name">Polar radius</string>
+    <string name="mars_fact_3_value">3376.2 ± 0.1 km</string>
+    <string name="mars_fact_4_name">Surface gravity</string>
+    <string name="mars_fact_4_value">3.72076 m/s²</string>
+    <string name="mars_fact_5_name">Escape velocity</string>
+    <string name="mars_fact_5_value">5.027 km/s</string>
+
+    <string name="ceres_fact_1_name">Discovery date</string>
+    <string name="ceres_fact_1_value">1 January 1801</string>
+    <string name="ceres_fact_2_name">Average orbital speed</string>
+    <string name="ceres_fact_2_value">17.905 km/s</string>
+    <string name="ceres_fact_3_name">Mean diameter</string>
+    <string name="ceres_fact_3_value">939.4±0.2 km</string>
+    <string name="ceres_fact_4_name">Equatorial rotation velocity</string>
+    <string name="ceres_fact_4_value">92.61 m/s</string>
+    <string name="ceres_fact_5_name">Spectral type</string>
+    <string name="ceres_fact_5_value">C</string>
+
+    <string name="jupiter_fact_1_name">Known satellites</string>
+    <string name="jupiter_fact_1_value">79 (as of 2018)</string>
+    <string name="jupiter_fact_2_name">Moment of inertia factor</string>
+    <string name="jupiter_fact_2_value">0.2756±0.0006</string>
+    <string name="jupiter_fact_3_name">Surface pressure</string>
+    <string name="jupiter_fact_3_value">20–200 kPa</string>
+    <string name="jupiter_fact_4_name">Scale height</string>
+    <string name="jupiter_fact_4_value">27 km (17 mi)</string>
+    <string name="jupiter_fact_5_name">Ices</string>
+    <string name="jupiter_fact_5_value">ammonia, water, ammonium hydrosulfide</string>
+
+    <string name="saturn_fact_1_name">Mean anomaly</string>
+    <string name="saturn_fact_1_value">317.020°</string>
+    <string name="saturn_fact_2_name">Inclination</string>
+    <string name="saturn_fact_2_value">2.485° to ecliptic</string>
+    <string name="saturn_fact_3_name">Circumference</string>
+    <string name="saturn_fact_3_value">365882.4 km</string>
+    <string name="saturn_fact_4_name">Moment of inertia factor</string>
+    <string name="saturn_fact_4_value">0.22</string>
+    <string name="saturn_fact_5_name">Surface pressure</string>
+    <string name="saturn_fact_5_value">140 kPa</string>
+
+    <string name="uranus_fact_1_name">Perihelion</string>
+    <string name="uranus_fact_1_value">18.33 AU</string>
+    <string name="uranus_fact_2_name">Discovery date</string>
+    <string name="uranus_fact_2_value">13 March 1781</string>
+    <string name="uranus_fact_3_name">Known satellites</string>
+    <string name="uranus_fact_3_value">27</string>
+    <string name="uranus_fact_4_name">Flattening</string>
+    <string name="uranus_fact_4_value">0.0229±0.0008</string>
+    <string name="uranus_fact_5_name">Orbital period</string>
+    <string name="uranus_fact_5_value">84.0205 yr</string>
+
+    <string name="neptune_fact_1_name">Orbital period</string>
+    <string name="neptune_fact_1_value">164.8 yr</string>
+    <string name="neptune_fact_2_name">Longitude of ascending node</string>
+    <string name="neptune_fact_2_value">131.784°</string>
+    <string name="neptune_fact_3_name">Argument of perihelion</string>
+    <string name="neptune_fact_3_value">276.336°</string>
+    <string name="neptune_fact_4_name">Volume</string>
+    <string name="neptune_fact_4_value">6.254×1013 km</string>
+    <string name="neptune_fact_5_name">Surface gravity</string>
+    <string name="neptune_fact_5_value">11.15 m/s²</string>
+
+    <string name="pluto_fact_1_name">Aphelion</string>
+    <string name="pluto_fact_1_value">49.305 AU</string>
+    <string name="pluto_fact_2_name">Synodic period</string>
+    <string name="pluto_fact_2_value">366.73 days</string>
+    <string name="pluto_fact_3_name">Sidereal rotation period</string>
+    <string name="pluto_fact_3_value">6.387230 d</string>
+    <string name="pluto_fact_4_name">Surface pressure</string>
+    <string name="pluto_fact_4_value">1.0 Pa</string>
+    <string name="pluto_fact_5_name">Planet category</string>
+    <string name="pluto_fact_5_value">dwarf planet</string>
+
+    <string name="eris_fact_1_name">Alternative designations</string>
+    <string name="eris_fact_1_value">Xena</string>
+    <string name="eris_fact_2_name">Inclination</string>
+    <string name="eris_fact_2_value">44.040°</string>
+    <string name="eris_fact_3_name">Known satellites</string>
+    <string name="eris_fact_3_value">Dysnomia</string>
+    <string name="eris_fact_4_name">Mass</string>
+    <string name="eris_fact_4_value">(1.6466±0.0085)×1022 kg</string>
+    <string name="eris_fact_5_name">Mean radius</string>
+    <string name="eris_fact_5_value">1163±6 km</string>
+</resources>

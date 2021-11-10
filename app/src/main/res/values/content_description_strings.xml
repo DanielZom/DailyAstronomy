@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="content_description_search">search</string>
+    <string name="content_description_main_background">app background</string>
+    <string name="content_description_splash_image">splash image</string>
+    <string name="content_description_delete_search_text">delete search text</string>
+    <string name="content_description_app_icon">app icon</string>
+    <string name="content_description_calendar_icon">calendar icon</string>
+    <string name="content_description_user_message_image">user message image</string>
+    <string name="content_description_astronomical_symbol">astronomical symbol</string>
+    <string name="content_description_solar_system_object">solar system object</string>
+    <string name="content_description_back">back</string>
+    <string name="content_description_article_image">article image</string>
+    <string name="content_description_gallery_image">gallery image</string>
+    <string name="content_description_gallery_image_background">gallery image background</string>
+    <string name="content_description_solar_system_object_info">solar system object info</string>
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Daily Astronomy</string>
+    <string name="news">News</string>
+    <string name="solar_system">Solar System</string>
+    <string name="live">Live</string>
+    <string name="settings">Settings</string>
+    <string name="gallery">Gallery</string>
+    <string name="theme_title">Theme:</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
+    <string name="version_title">Version:</string>
+    <string name="dash">-</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="empty_news_list">There are no news</string>
+    <string name="empty_images_list">There are no images</string>
+    <string name="something_went_wrong">Oops, something went wrong</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="show_me_more">Show me more</string>
+    <string name="news_limit_reached">This is a beta application that allows to download only 100 articles at once. Please follow the application updates for more informations.</string>
+</resources>

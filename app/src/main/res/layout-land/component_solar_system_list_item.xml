@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="solarSystemObject"
+            type="hu.daniel.dailyastronomy.dto.SolarSystemObject" />
+
+        <variable
+            name="vm"
+            type="hu.daniel.dailyastronomy.presentation.main.news.NewsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/solarSystemItemParentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="@{solarSystemObject.name}"
+        tools:background="@drawable/background">
+
+        <ImageView
+            android:id="@+id/info"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:alpha="0"
+            android:contentDescription="@string/content_description_solar_system_object_info"
+            android:src="@drawable/info"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.04" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:text="@{solarSystemObject.name}"
+            android:textColor="@color/secondaryColor70"
+            android:textSize="@dimen/sp_30"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/characteristics"
+            app:layout_constraintEnd_toEndOf="@id/characteristics"
+            app:layout_constraintStart_toStartOf="@id/characteristics"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Earth" />
+
+        <ImageView
+            android:id="@+id/objectImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/content_description_solar_system_object"
+            android:src="@{solarSystemObject.imageId}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2"
+            tools:src="@drawable/earth" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/characteristics"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:alpha="0"
+            android:background="@drawable/transparent_black_background_with_stroke"
+            android:padding="@dimen/dp_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/info"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/info"
+            app:layout_constraintWidth_percent="0.4">
+
+            <TextView
+                android:id="@+id/characteristicsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/characteristics"
+                android:textColor="@color/secondaryColor70"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/astronomicalSymbolTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/astronomical_symbol"
+                android:textColor="@color/secondaryColor70"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/characteristicsTitle" />
+
+            <ImageView
+                android:id="@+id/astronomicalSymbolImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dp_4"
+                android:contentDescription="@string/content_description_astronomical_symbol"
+                android:src="@{solarSystemObject.astronomicalSymbolId}"
+                app:layout_constraintBottom_toBottomOf="@id/astronomicalSymbolTitle"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toEndOf="@id/astronomicalSymbolTitle"
+                app:layout_constraintTop_toBottomOf="@id/characteristicsTitle"
+                app:layout_constraintTop_toTopOf="@id/astronomicalSymbolTitle"
+                tools:src="@drawable/symbol_earth" />
+
+            <LinearLayout
+                android:id="@+id/objectCharacteristics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/astronomicalSymbolImage" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
